@@ -1,0 +1,33 @@
+\chapter{回音壁模式微腔简介}
+\label{sec:WGM}
+
+二氧化硅等材料的折射率大于空气，从二氧化硅射向空气中的光会存在全反射临界角。如果将二氧化硅做成圆环、圆球等形状，光就可以在其内壁多次反射。如果光传播到圆周某处的相位条件使得每一圈都能形成相干增强（即谐振），则光子可以在腔中被束缚较长时间，光强也会在微腔当中得到显著增强。由于光在腔中传播类似于声音在天坛回音壁或圣保罗大教堂耳语墙的传播，如图\ref{pic:WGM}，因而这种微型谐振腔得名回音壁模式微腔。
+
+\begin{figure}
+\centering
+\includegraphics[width=14cm]{WGM}
+\caption{回音壁模式微腔。a，声波在建筑物内壁上的反射。b，回音壁模式微腔中电场强度剖面图。图引自\cite{LiBeiBei2014}}
+\label{pic:WGM}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = 10cm ]{mode.png}
+\caption{一些不同模式数的回音壁模式的场分布。a-b， 上到下依次为$m = 50$， $q= 1\sim4$的模式在截面上和赤道面上的场分布。 c-d，从上到下依次为$q = 1$，$l = 50$,  $m = 50, 49, 48, 47$的模式在截面上和微球表面上的场分布。图引自\cite{LiBeiBei2014}}
+\label{pic:mode}
+\end{figure}
+
+用光反射的射线模型描述回音壁模式的光场分布还是过于粗略，对于本次实验所采用的球腔来说，通常需要在球坐标系下解亥姆霍兹方程，解出的本征方程即为模式分布（回音壁模式求解的概述，见\cite{oraevsky2002whispering}）。当掠入射条件满足时，模式与腔的外表面距离很近，此时可以近似认为电场只有球坐标系一个方向的分量，这样模式可以分为两类，电场与径向垂直（即沿角向）为TE模式；电场沿径向为TM模式。对于这两种情况，均可以将电场写成球坐标($r, \phi, \theta$)的函数并分离变量$\psi(r, \phi, \theta) = \psi_r(r)\psi_{\phi}(\phi)\psi_{\theta}(\theta)$，求解亥姆霍兹方程可得
+\begin{equation}
+\psi_{\phi} = \frac{1}{\sqrt{2\pi}}exp(\pm im\phi)
+\end{equation}
+
+\begin{equation}
+\frac{1}{\cos(\theta)}\frac{d}{d\theta}(\cos(\theta)\frac{d}{d\theta}\psi_{\theta})-\frac{m^2}{\cos(\theta)^2}\psi_{\theta}+l(l+1)\psi_{\theta} = 0
+\end{equation}
+此方程的解为球谐函数$Y^l_m(\theta)$.
+
+\begin{equation}
+\frac{d^2}{dr^2}\psi_r+\frac{2}{r}\frac{d}{dr}\psi_r+(n^2k^2-\frac{l(l+1)}{r^2})\psi_r = 0
+\end{equation}
+其中$n$为介质折射率，$k=2\pi/\lambda$为波矢，$\lambda$为波长。此方程的解为球Bessel函数$j_r(nkr)$（腔内）和球第二类Hankel函数$h_r(kr)$（腔外）。一个球腔模式可以由四个参数确定下来，分别是角向量子数$l$，环向量子数$m$，径向量子数$q$和偏振$p$。$m$代表有$m$个环向电场强度极大值，$q$代表着径向有$q$个电场强度极大值，而角向电场强度极大值的个数由$l-m+1$来决定，一些量子数下的模式分布举例见图\ref{pic:mode}。$l, m$还满足$-l\le m\le l$。
