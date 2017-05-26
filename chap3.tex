@@ -65,7 +65,7 @@ P(t) = \epsilon_0\chi^{(2)}E^2(t),
 \label{pic:potential}
 \end{figure}
 
-从\ref{pic:response}中可以更加直观地看到，中心对称材料或非晶态材料的极化率随电场的变化虽然比起标准正弦形式有所变形，但依然是奇函数，不含偶次分量，即没有二次非线性响应，而非中心对称材料则会呈现出含偶次分量的特点。
+从图\ref{pic:response}中可以更加直观地看到，中心对称材料或非晶态材料的极化率随电场的变化虽然比起标准正弦形式有所变形，但依然是奇函数，不含偶次分量，即没有二次非线性响应，而非中心对称材料则会呈现出含偶次分量的特点。
 
 \begin{figure}
 \centering
@@ -182,7 +182,7 @@ g_b =  2i\frac{\omega_1^2}{\omega_2n^2}\frac{\int \mathbf{E}_{02}^* \cdot (\delt
 \label{sec:2Resonance}
 式\ref{eq:gs} \ref{eq:gb}的耦合系数表达式中均含有空间交叠积分，其中$g_s$的空间积分在球坐标系下对应着量子力学中的CG系数，即，需要$M=2m$, $0\le L \le 2l$，这时$g_s$才不为零。对于$g_b$，因为还涉及空间微分，所以还需考虑空间分布函数的奇偶性。总而言之，两模式之间是否有非线性耦合，不仅与材料是否有较大的非线性系数有关，还与空间交叠积分是否不为零有关。
 
-将式\ref{eq:cpmode}\ref{eq:cpmode2}中的$a_1, a_2$换到旋转坐标系中来求解耦合模方程，$\tilde{a}_1 = a_1e^{i(\omega_s-\omega_1)t}$, $\tilde{a}_2 = a_2e^{i(2\omega_s-\omega_2)t}$，做这样变换后的耦合模方程可以写成
+将式\ref{eq:cpmode}和\ref{eq:cpmode2}中的$a_1, a_2$换到旋转坐标系中来求解耦合模方程，$\tilde{a}_1 = a_1e^{i(\omega_s-\omega_1)t}$, $\tilde{a}_2 = a_2e^{i(2\omega_s-\omega_2)t}$，做这样变换后的耦合模方程可以写成
 \begin{gather}
 \label{eq:cpmoder}
 \frac{d\tilde{a}_1}{dt} = [i(\omega_s-\omega_1)-\frac{\kappa_{20}+\kappa_{1e}}{2}]\tilde{a}_1+\sqrt{\kappa_{1e}}s+(g_s+g_b)^*\tilde{a}_1\tilde{a}_2^* \\
@@ -194,11 +194,11 @@ g_b =  2i\frac{\omega_1^2}{\omega_2n^2}\frac{\int \mathbf{E}_{02}^* \cdot (\delt
 \begin{equation}
 P_2 = \kappa_{2e}\frac{|g_s+g_b|^2}{(2\omega_s-\omega_2)^2+(\frac{\kappa_{20}+\kappa_{2e}}{2})^2}\frac{\kappa_{1e}^2P_1^2}{(\omega_s-\omega_1)^2+(\frac{\kappa_{10}+\kappa_{1e}}{2})^2}
 \end{equation}
-可以看到，在损耗和非线性耦合一定的情况下，输入光与腔膜之间的失谐越小（即，$|2\omega_s-\omega_2|, |\omega_s-\omega_1|$越小），二次谐波的功率就越大。因此，我们希望输入光与基波、二次谐波同时达到共振，这需要满足$\Delta \omega = \omega_2 - 2\omega_1=0$，即双共振条件。
+可以看到，在损耗和非线性耦合一定的情况下，输入光与腔膜之间的失谐越小（即，$|2\omega_s-\omega_2|$, $|\omega_s-\omega_1|$越小），二次谐波的功率就越大。因此，我们希望输入光与基波、二次谐波同时达到共振，这需要满足$\Delta \omega = \omega_2 - 2\omega_1=0$，即双共振条件。
 
 在晶体非线性光学当中，由于光频是连续分布的，故需要满足的是两种频率具有尽量接近的波矢$k$，即通常所说的相位匹配条件。而在微型谐振腔中，相位匹配条件由角量子数关系$M=2m$来满足，但同时，由于腔膜频率是分立的，因而还需要满足双共振条件来确保二次谐波的有效产生。
 
-由于微型谐振腔中存在色散，包括材料色散和几何色散，色散使得腔中满足相位匹配条件的两个基模模式并不能满足双共振条件，图\ref{pic:mode}(a)就展示了在直径为60$\mu m$的二氧化硅微球腔中的二次谐波（SH）与基波（FW）的色散情况。可以看到，由于不同径向量子数的模式色散情况不一致，事实上可以选用SH与FW拥有不同径向量子数的情况来实现双共振条件。如，图中所示选取FW的$q=1$，SH的$Q=2$，在角向量子数$l=166$附近可以实现较好的双共振条件。然而需要指出的是，即使使用这样的方法，也不能够保证精确的双共振。首先，由于模式的分立性（即，色散曲线上实际是一个个单独的点），虽然在$l=166$附近的曲线一定具有双共振，但这里并不一定有模式，如图\ref{pic:mode}(b)中的红色点所示，在这种条件下效率最好的模式由于双共振条件带来的功率降低也在$10^{-6}$量级，并且随着模式数的变化，效率也急剧下降。另一方面，实验中很难精确控制球腔的几何形状，比如直径或球的非理想性等等，以直径变化为例，图\ref{pic:mode}(b)中三种不同的直径相差极小，但是对双共振条件带来的效率影响极大，在同一波长范围内，直径稍微变动就会使得效率急剧下降。
+由于微型谐振腔中存在色散，包括材料色散和几何色散，色散使得腔中满足相位匹配条件的两个基模模式并不能满足双共振条件，图\ref{pic:mode}a就展示了在直径为60$\mu m$的二氧化硅微球腔中的二次谐波（SH）与基波（FW）的色散情况。可以看到，由于不同径向量子数的模式色散情况不一致，事实上可以选用SH与FW拥有不同径向量子数的情况来实现双共振条件。如，图中所示选取FW的$q=1$，SH的$Q=2$，在角向量子数$l=166$附近可以实现较好的双共振条件。然而需要指出的是，即使使用这样的方法，也不能够保证精确的双共振。首先，由于模式的分立性（即，色散曲线上实际是一个个单独的点），虽然在$l=166$附近的曲线一定具有双共振，但这里并不一定有模式，如图\ref{pic:mode}b中的红色点所示，在这种条件下效率最好的模式由于双共振条件带来的功率降低也在$10^{-6}$量级，并且随着模式数的变化，效率也急剧下降。另一方面，实验中很难精确控制球腔的几何形状，比如直径或球的非理想性等等，以直径变化为例，图\ref{pic:mode}(b)中三种不同的直径相差极小，但是对双共振条件带来的效率影响极大，在同一波长范围内，直径稍微变动就会使得效率急剧下降。
 
 \begin{figure}
 \centering
@@ -249,11 +249,11 @@ $\chi_{Kerr}$为Kerr非线性系数，$n_i$为材料在基波和二次谐波波�
 
 首先考虑基波由于热效应和Kerr效应带来的腔模移动。在二氧化硅腔中，热效应对于腔膜的影响是使腔膜产生一个红移，输入光功率增加而频率不变时，腔膜红移，导致输入光和腔膜之间的失谐增大，从而由输入光到腔内能量的转化效率变低。如果输入光功率不变，而是从冷腔膜（腔中能量极小时腔模的位置）开始增加波长，则由于失谐逐渐减小，转化效率逐渐增加，耦合进腔的功率变大，从而使得腔膜再次红移，最终，当转化效率已经达到最大之后，输入光变到腔膜的红失谐处，导致转化效率降低，腔膜蓝移的更加厉害，最终使得输入光几乎不能耦合进腔中\cite{carmon2004dynamical}，。
 
-而如果同时考虑二次谐波腔膜的移动，如图\ref{pic:try_ed2}(b)所示，当腔中能量极小时(cold cavity)，输入光与基波共振，但其二倍频不与二次谐波模式共振，此时二次谐波产生效率极低。如果输入光功率足够大，则基波和二次谐波腔膜都会发生红移，但是二次谐波腔膜的移动要比输入光的二倍频移动速度慢，则如果开始时输入光二倍频与二次谐波腔膜是蓝失谐的位置关系，则在某一失谐时，能够满足双共振条件图\ref{pic:try_ed2}(b2)，此后，如果波长继续增大，则会从两个腔膜中跳出。此过程对应的二次谐波能量和基波经过腔的透射谱如图\ref{pic:try_ed2}(a)所示。
+而如果同时考虑二次谐波腔膜的移动，如图\ref{pic:try_ed2}b所示，当腔中能量极小时(cold cavity)，输入光与基波共振，但其二倍频不与二次谐波模式共振，此时二次谐波产生效率极低。如果输入光功率足够大，则基波和二次谐波腔膜都会发生红移，但是二次谐波腔膜的移动要比输入光的二倍频移动速度慢，则如果开始时输入光二倍频与二次谐波腔膜是蓝失谐的位置关系，则在某一失谐时，能够满足双共振条件图\ref{pic:try_ed2}b，此后，如果波长继续增大，则会从两个腔膜中跳出。此过程对应的二次谐波能量和基波经过腔的透射谱如图\ref{pic:try_ed2}a所示。
 
-由上述过程可知，如果输入光功率较小，则即使有腔膜移动，也不足以达到双共振条件，因而产生二次谐波功率极低，当输入光功率达到某一临界值时，恰好能够达到双共振条件，当输入光功率继续增大，则在基波达到共振前二次谐波就达到了共振，此时对于实验来说最为稳定，但由于基波未达到共振，虽然输入功率增加了，总体而言产生二次谐波的功率并没有显著变化，该过程如图\ref{pic:P2change_ed2_ai}(a)所示。
+由上述过程可知，如果输入光功率较小，则即使有腔膜移动，也不足以达到双共振条件，因而产生二次谐波功率极低，当输入光功率达到某一临界值时，恰好能够达到双共振条件，当输入光功率继续增大，则在基波达到共振前二次谐波就达到了共振，此时对于实验来说最为稳定，但由于基波未达到共振，虽然输入功率增加了，总体而言产生二次谐波的功率并没有显著变化，该过程如图\ref{pic:P2change_ed2_ai}a所示。
 
-转化效率随耦合系数$K$的变化如图\ref{pic:P2change_ed2_ai}(b)所示，在临界耦合的时候转化效率达到最高。不同波长对应的临界功率与色散曲线有关图\ref{pic:P2change_ed2_aicd}(c)，但一般来说，转化效率与临界功率成正比，这与二次谐波的二阶功率关系是相适应的，同时可以看到，同一个临界功率下，球越大，转化效率会越低，可能是由于球大了之后场比较弥散且更靠近体内，因而表面和体的非线性效应都会有所下降，如图\ref{pic:P2change_ed2_aicd}(d)。
+转化效率随耦合系数$K$的变化如图\ref{pic:P2change_ed2_ai}b所示，在临界耦合的时候转化效率达到最高。不同波长对应的临界功率与色散曲线有关图\ref{pic:P2change_ed2_aicd}a，但一般来说，转化效率与临界功率成正比，这与二次谐波的二阶功率关系是相适应的，同时可以看到，同一个临界功率下，球越大，转化效率会越低，可能是由于球大了之后场比较弥散且更靠近体内，因而表面和体的非线性效应都会有所下降，如图\ref{pic:P2change_ed2_aicd}b。
 \begin{figure}
 \includegraphics[width=11cm]{P2change_ed2_ai}
 \centering
@@ -264,6 +264,6 @@ $\chi_{Kerr}$为Kerr非线性系数，$n_i$为材料在基波和二次谐波波�
 \begin{figure}
 \includegraphics[width=11cm]{P2change_ed2_aicd}
 \centering
-\caption{\textbf{Influence of the size of microcavity. c,} The critical input power versus the FW wavelength. The symbols represents a pair of FW and SH modes with $l_2=2l_1$.  \textbf{d, }The critical conversion efficiency as a function of different critical input power. The symbols are the same with those in panel c and the dashed lines are only guides for the eye. }
+\caption{\textbf{Influence of the size of microcavity. a,} The critical input power versus the FW wavelength. The symbols represents a pair of FW and SH modes with $l_2=2l_1$.  \textbf{b, }The critical conversion efficiency as a function of different critical input power. The symbols are the same with those in panel c and the dashed lines are only guides for the eye. }
 \label{pic:P2change_ed2_aicd}
 \end{figure}
