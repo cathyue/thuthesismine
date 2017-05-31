@@ -2,7 +2,7 @@
 \label{sec:nonlinearTheo}
 \section{基于电偶极子的二次非线性}
 \label{sec:dipole}
-在经典光学中，介质与电磁波的相互作用通常用介质极化率来描述，介质极化率随电场变化的函数关系可以展开为电场的幂级数，
+在经典光学中，介质与电磁波的相互作用通常用介质极化率来描述，介质极化率随电场变化的函数关系可以展开为电场的幂级数\footnote{本节详细公式推导及讲解，见\cite{boyd2003nonlinear}}，
 \begin{equation}
 P(t) = \epsilon_0(\chi^{(1)}E(t)+\chi^{(2)}E^2(t)+\chi^{(3)}E^3(t)+\dots)
 \end{equation}
@@ -21,7 +21,7 @@ E(t) = E_0e^{-i\omega t}+\textrm{c.c.}
 \begin{equation}
 P^{(2)}(t) = 2\epsilon_0\chi^{(2)}E_0E_0^*+(\epsilon_0\chi^{(2)}E_0^2e^{-2i\omega t}+\textrm{c.c.})
 \end{equation}
-可以看到第一项对应着一个直流分量，不激发辐射场，被称作光学整流效应optical rectification。而第二项就产生了新的频率分量，从量子光学的角度来看，可以看成是材料中的原子吸收了两个光子，又产生了一个能量等于两个光子之和的二倍频光子，如图\ref{pic:energyLevel}(a)。
+可以看到第一项对应着一个直流分量，不激发辐射场，被称作光学整流效应（optical rectification）。而第二项就产生了新的频率分量，从量子光学的角度来看，可以看成是材料中的原子吸收了两个光子，又产生了一个能量等于两个光子之和的二倍频光子，如图\ref{pic:energyLevel}(a)。
 
 \begin{figure}
 \centering
@@ -180,7 +180,7 @@ g_b =  2i\frac{\omega_1^2}{\omega_2n^2}\frac{\int \mathbf{E}_{02}^* \cdot (\delt
 
 \section{空间交叠积分及双共振条件}
 \label{sec:2Resonance}
-式\ref{eq:gs} \ref{eq:gb}的耦合系数表达式中均含有空间交叠积分，其中$g_s$的空间积分在球坐标系下对应着量子力学中的CG系数，即，需要$M=2m$, $0\le L \le 2l$，这时$g_s$才不为零。对于$g_b$，因为还涉及空间微分，所以还需考虑空间分布函数的奇偶性。总而言之，两模式之间是否有非线性耦合，不仅与材料是否有较大的非线性系数有关，还与空间交叠积分是否不为零有关。
+式\ref{eq:gs}和\ref{eq:gb}的耦合系数表达式中均含有空间交叠积分，其中$g_s$的空间积分在球坐标系下对应着量子力学中的CG系数，即，需要$M=2m$, $0\le L \le 2l$，这时$g_s$才不为零。对于$g_b$，因为还涉及空间微分，所以还需考虑空间分布函数的奇偶性。总而言之，两模式之间是否有非线性耦合，不仅与材料是否有较大的非线性系数有关，还与空间交叠积分是否不为零有关。
 
 将式\ref{eq:cpmode}和\ref{eq:cpmode2}中的$a_1, a_2$换到旋转坐标系中来求解耦合模方程，$\tilde{a}_1 = a_1e^{i(\omega_s-\omega_1)t}$, $\tilde{a}_2 = a_2e^{i(2\omega_s-\omega_2)t}$，做这样变换后的耦合模方程可以写成
 \begin{gather}
@@ -192,7 +192,7 @@ g_b =  2i\frac{\omega_1^2}{\omega_2n^2}\frac{\int \mathbf{E}_{02}^* \cdot (\delt
 
 在稳态情况下，假设二次谐波产生对基波的幅度不产生影响（在二次非线性极弱的介质，如二氧化硅中是成立的），上面两式可推出输出的二次谐波功率和输入基波功率之间的关系
 \begin{equation}
-P_2 = \kappa_{2e}\frac{|g_s+g_b|^2}{(2\omega_s-\omega_2)^2+(\frac{\kappa_{20}+\kappa_{2e}}{2})^2}\frac{\kappa_{1e}^2P_1^2}{(\omega_s-\omega_1)^2+(\frac{\kappa_{10}+\kappa_{1e}}{2})^2}
+P_2 = \kappa_{2e}\frac{|g_s+g_b|^2}{(2\omega_s-\omega_2)^2+(\frac{\kappa_{20}+\kappa_{2e}}{2})^2}\frac{\kappa_{1e}^2P_1^2}{[(\omega_s-\omega_1)^2+(\frac{\kappa_{10}+\kappa_{1e}}{2})^2]^2}
 \end{equation}
 可以看到，在损耗和非线性耦合一定的情况下，输入光与腔膜之间的失谐越小（即，$|2\omega_s-\omega_2|$, $|\omega_s-\omega_1|$越小），二次谐波的功率就越大。因此，我们希望输入光与基波、二次谐波同时达到共振，这需要满足$\Delta \omega = \omega_2 - 2\omega_1=0$，即双共振条件。
 
@@ -203,12 +203,7 @@ P_2 = \kappa_{2e}\frac{|g_s+g_b|^2}{(2\omega_s-\omega_2)^2+(\frac{\kappa_{20}+\k
 \begin{figure}
 \centering
 \includegraphics[width=11cm]{disp_ed2_ai.png}
-\caption{\textbf{Frequency mismatch induced by dispersion. a,}   Calculated relative
-frequency mismatch between SH with different radial orders q and FW as a function of
-the polar order of FW.   \textbf{b,}  The calculated off-resonance coefficient of the
-q = 2 mode family in microspheres with different diameters D versus the wavelength of
-FW. The symbols represent modes with different polar orders separated by a free spectra
-range of around 10nm.}
+\caption{ 色散引起的频率失配。a，计算所得不同径向和角向量子数情况下的频率失配。b，计算所得的频率失配因子（$Q=2$）在不同大小的球腔当中随基波频率的变化 }
 \label{pic:mode}
 \end{figure}
 
@@ -237,13 +232,8 @@ $\chi_{Kerr}$为Kerr非线性系数，$n_i$为材料在基波和二次谐波波�
 
 \begin{figure}
 \centering
-\includegraphics[width=13cm]{try_ed2}
-%\caption{\textbf{Third order nonlinearity assisted double resonance. a,} The output SH power (left ordinate, black) and the FW transmission (right ordinate, blue) versus detuning in wavelength between the pump and FW. The numbers in circle indicate three different states corresponding to the schematics with the same number in panel b. \textbf{b,} Schematics of the process to achieve double resonance. The right part is the wavelength relative to the FW wavelength in cold cavity and the left part is the wavelength relative to half of the FW wavelength in cold cavity. Note that the scale of the right part is twice of that on the left. The arrows represent the pump wavelength on the right and half of the pump wavelength on the left. The Lorentz line shapes represent the FW and the SH cavity mode on the right and the left respectively. The top schematics illustrates the relative position of the pump and the cavity mode when the input power is too small to introduce obvious third order nonlinear effects while the lower ones show the position information of the corresponding states in panel a.}
-
-\end{figure}
-\begin{figure}
-\includegraphics[width=0cm]{try_ed2}
-\caption{\textbf{Third order nonlinearity assisted double resonance. a,} The output SH power (left ordinate, black) and the FW transmission (right ordinate, blue) versus detuning in wavelength between the pump and FW. The numbers in circle indicate three different states corresponding to the schematics with the same number in panel b. \textbf{b,} Schematics of the process to achieve double resonance. The right part is the wavelength relative to the FW wavelength in cold cavity and the left part is the wavelength relative to half of the FW wavelength in cold cavity. Note that the scale of the right part is twice of that on the left. The arrows represent the pump wavelength on the right and half of the pump wavelength on the left. The Lorentz line shapes represent the FW and the SH cavity mode on the right and the left respectively. The top schematics illustrates the relative position of the pump and the cavity mode when the input power is too small to introduce obvious third order nonlinear effects while the lower ones show the position information of the corresponding states in panel a.}
+\includegraphics[width=12cm]{try_ed2}
+\caption{三阶非线性协助的双共振条件。a，二次谐波功率和基波透射谱随失谐的变化。b，达到双共振条件经历物理过程的示意图。}
 \label{pic:try_ed2}
 \end{figure}
 
@@ -257,13 +247,13 @@ $\chi_{Kerr}$为Kerr非线性系数，$n_i$为材料在基波和二次谐波波�
 \begin{figure}
 \includegraphics[width=11cm]{P2change_ed2_ai}
 \centering
-\caption{\textbf{Maximum output SH power and efficiency. a,} The maximum output SH power versus input power. The red line is the ideal output SH power by setting the off-resonance coefficient to one. The black line represents the maximum output SH power considering all the possible detuning (corresponds to state 2 in Fig. 2a). \textbf{b, } The conversion efficiency at the critical input power (left ordinate, black) and the critical input power (right ordinate, blue) as a function of coupling coefficient K. The dashed lines are results of the analytical expression and the symbols are calculated numerically with nonlinear coupled-mode equations. \textbf{c-d, } The influence of different diameters of microsphere and various polar order $l$. }
+\caption{二次谐波最大输出功率和转化效率。a，最大二次谐波输出功率随泵浦光功率变化曲线。b，二次谐波转换效率及最大输出功率随耦合条件的变化关系。}
 \label{pic:P2change_ed2_ai}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=11cm]{P2change_ed2_aicd}
 \centering
-\caption{\textbf{Influence of the size of microcavity. a,} The critical input power versus the FW wavelength. The symbols represents a pair of FW and SH modes with $l_2=2l_1$.  \textbf{b, }The critical conversion efficiency as a function of different critical input power. The symbols are the same with those in panel c and the dashed lines are only guides for the eye. }
+\caption{微腔尺寸对于二次谐波的影响。a，不同微腔直径下输入临界功率随泵浦波长的变化。b，不同微腔直径下转化效率随输入临界功率的变化。}
 \label{pic:P2change_ed2_aicd}
 \end{figure}
